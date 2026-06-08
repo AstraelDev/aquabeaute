@@ -1,0 +1,6 @@
+{
+  "name": "Aquabeauté",
+  "description": "Institut de beauté à Mutzig. Boutique de cosmétiques premium et création de bons cadeaux personnalisés.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

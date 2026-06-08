@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&family=Alex+Brush&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Jost", sans-serif;
+  --font-script: "Alex Brush", cursive;
+  
+  --color-brand-nude: #F9F5F1;      /* Fond chaleureux clair */
+  --color-brand-cream: #F5F1EB;     /* Crème chaleureux alternative */
+  --color-brand-pink-light: #FFF4FA; /* Fond fuchsia/rose blush ultra doux et lumineux */
+  --color-brand-pink-blush: #F6D3E5; /* Rose poudré clair fuchsia pour bordures */
+  --color-brand-pink: #C40078;       /* Accentuation fuchsia vibrant du logo de l'institut */
+  --color-brand-pink-dark: #9A005E;  /* Rose poudré foncé de soutien (fuchsia profond) */
+  --color-brand-taupe: #5D5D5D;      /* Couleur de texte secondaire atténuée */
+  --color-brand-gold: #C40078;       /* Or doux / sable doré ou rose taupe chic replacé par fuchsia chic */
+  --color-brand-eucalyptus: #7B7D6B; /* Vert sauge élégant */
+  --color-brand-charcoal: #3D3D3D;   /* Texte principal profond chic */
+  --color-brand-fuchsia: #C40078;    /* Fuchsia emblématique du logo */
+  --color-brand-fuchsia-dark: #9A005E;
+  --color-brand-fuchsia-light: #FFF4FA;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-nude);
+    color: var(--color-brand-charcoal);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Styles et effets d'élévation luxury wellness */
+.luxury-shadow {
+  box-shadow: 0 4px 20px -2px rgba(138, 123, 117, 0.08);
+}
+
+.luxury-shadow-sm {
+  box-shadow: 0 2px 10px -1px rgba(138, 123, 117, 0.05);
+}
+
+/* Soulignement animé */
+.hover-underline {
+  position: relative;
+}
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Boutons haut de gamme */
+.btn-luxury-primary {
+  background-color: var(--color-brand-charcoal);
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-brand-charcoal);
+}
+.btn-luxury-primary:hover {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn-luxury-secondary {
+  background-color: #ffffff;
+  color: var(--color-brand-charcoal);
+  padding: 0.9rem 2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: 1px solid var(--color-brand-pink-blush);
+  transition: all 0.3s ease;
+}
+.btn-luxury-secondary:hover {
+  background-color: var(--color-brand-cream);
+  border-color: var(--color-brand-pink);
+}
